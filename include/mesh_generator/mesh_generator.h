@@ -28,6 +28,7 @@ public:
     std_msgs::Float32MultiArray get_mesh_data();
 private:
     ros::Subscriber _pointcloud_sub;
+    ros::Publisher _mesh_pub;
     ros::NodeHandle _nh;
     void _pointcloud_callback(const sensor_msgs::PointCloud2ConstPtr msg);
     boost::shared_ptr<pcl::PolygonMesh> _triangles;
